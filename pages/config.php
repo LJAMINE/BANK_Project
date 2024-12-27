@@ -31,7 +31,7 @@ class Config{
 
     $this->conn=new PDO($this->dns,self::DBUSER,self::DBPASS);
     $this->conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_ASSOC);
-    echo "Connected successfully";
+    // echo "Connected successfully";
 } catch (PDOException $e) {
 
   echo "error";

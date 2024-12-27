@@ -15,7 +15,7 @@ include('./config.php');
 </head>
 <body>
   
-<!-- add a modal user -->
+<!-- add a modal user -------------------------------------------------------->
 <div class="modal fade" tabindex="-1" id="addNewUserModal">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
@@ -25,6 +25,60 @@ include('./config.php');
       </div>
       <div class="modal-body">
 <form id="add-user-form" class="p-2" novalidate>
+  
+<div class="row mb-3">
+<div class="col">
+  <input type="text" name="acountNumF"  class="form-control form-control-lg" placeholder="enter acountNumF" required>
+  <div class="invalid-feedback">acountNum is required</div>
+</div>
+<div class="col">
+  <input type="text" name="holderNameF"  class="form-control form-control-lg" placeholder="enter holderNameF" required>
+  <div class="invalid-feedback">holderName is required</div>
+</div>
+</div>
+<div class="mb-3">
+  <input type="number" name="balanceF"  class="form-control form-control-lg " placeholder="enter balanceF"required>
+  <div class="invalid-feedback">balance is required</div>
+
+</div>
+<!-- <div class="mb-3">
+  <select name="accountTypeF" class="form-control form-control-lg" required>
+    <option value="" disabled selected>Select account type</option>
+    <option value="1">Business account</option>
+    <option value="2">Current account</option>
+    <option value="3">Saving account</option>
+  </select>
+  <div class="invalid-feedback">Account type is required</div>
+</div> -->
+
+<div class="mb-3">
+  <input type="submit" value="Add User" class="btn btn-primary btn-block btn-lg" id="add-user-btn">
+</div>
+</form>
+
+    </div>
+      
+    </div>
+  </div>
+</div>
+<!-- end a modal user------------------------------------------------------ -->
+
+
+
+
+
+
+
+<!-- edit ---------(----------------------------------------------------------------------------- -->
+<div class="modal fade" tabindex="-1" id="editNewUserModal">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">edit a new account</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+<form id="edit-user-form" class="p-2" novalidate>
   
 <div class="row mb-3">
 <div class="col">
@@ -52,7 +106,7 @@ include('./config.php');
 </div> -->
 
 <div class="mb-3">
-  <input type="submit" value="Add User" class="btn btn-primary btn-block btn-lg" id="add-user-btn">
+  <input type="submit" value="update User" class="btn btn-success btn-block btn-lg" id="edit-user-btn">
 </div>
 </form>
 
@@ -61,7 +115,7 @@ include('./config.php');
     </div>
   </div>
 </div>
-<!-- end a modal user -->
+<!-- ---edit---------- ------------------------------------------------------------------------->
 <d class="container">
   <div class="row mt-4">
     <div class="col-lg-12 d-flex justify-content-between align-items-center">
@@ -92,6 +146,8 @@ include('./config.php');
         <table class="table table-striped table-bordered text-center">
           <thead>
             <tr>
+            <th>Account ID</th>
+
               <th>Account Number</th>
               <th>Holder Name </th>
               <th>Balance</th>
@@ -101,19 +157,7 @@ include('./config.php');
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>1</td>
-              <td>amine</td>
-              <td>1000$</td>
-         
-
-              <!-- <td>business account</td> -->
-              <td>
-                <a href="#" class="btn btn-success btn-sm rounded-pill">edit</a>
-                <a href="#" class="btn btn-danger btn-sm rounded-pill">delete</a>
-
-              </td>
-            </tr>
+          
           </tbody>
         </table>
       </div>

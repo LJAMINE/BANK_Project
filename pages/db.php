@@ -21,6 +21,16 @@ class Database extends Config{
         return true;
 
     }
+    //fetch all account from database
+    
+    public function read(){
+        $sql="SELECT * from account ORDER BY accountID DESC ";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute();
+        $result=$stmt->fetchAll();
+        return $result;
+    }
 }
+
 
 ?>
